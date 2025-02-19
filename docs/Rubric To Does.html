@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science Project Checklist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .header-icon {
+            text-align: center;
+            font-size: 4rem;
+            color: #3498db;
+            margin-bottom: 15px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin: 0 0 25px 0;
+            font-size: 2.2em;
+        }
+
+        .todo-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .todo-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+            transition: all 0.2s ease;
+        }
+
+        .todo-item:hover {
+            transform: translateX(5px);
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+        }
+
+        input[type="checkbox"] {
+            margin-right: 15px;
+            transform: scale(1.3);
+            cursor: pointer;
+        }
+
+        label {
+            flex-grow: 1;
+            color: #495057;
+            font-size: 1em;
+            line-height: 1.4;
+        }
+
+        .completed {
+            text-decoration: line-through;
+            opacity: 0.7;
+        }
+
+        .fa-check-circle {
+            color: #2ecc71;
+            margin-left: 15px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            font-size: 1.2em;
+        }
+
+        .fa-check-circle.show {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-icon">
+            <i class="fas fa-clipboard-check"></i>
+        </div>
+        <h1>Data Science Project Checklist</h1>
+        <ul class="todo-list">
+            <li class="todo-item">
+                <input type="checkbox" class="task-checkbox">
+                <label>The code should run without errors.</label>
+                <i class="fas fa-check-circle"></i>
+            </li>
+            <li class="todo-item">
+                <input type="checkbox" class="task-checkbox">
+                <label>The project uses functions, loops, comments and docstrings.</label>
+                <i class="fas fa-check-circle"></i>
+            </li>
+            <li class="todo-item">
+                <input type="checkbox" class="task-checkbox">
+                <label>Questions and observations are placed regularly throughout the report using the QVO framework.</label>
+                <i class="fas fa-check-circle"></i>
+            </li>
+            <li class="todo-item">
+                <input type="checkbox" class="task-checkbox">
+                <label>Visualizations use appropriate plot type, data encodings, transformations, and formatting.</label>
+                <i class="fas fa-check-circle"></i>
+            </li>
+            <li class="todo-item">
+                <input type="checkbox" class="task-checkbox">
+                <label>Explanatory notebook has at least 3 visualizations matching exploratory insights.</label>
+                <i class="fas fa-check-circle"></i>
+            </li>
+            <li class="todo-item">
+                <input type="checkbox" class="task-checkbox">
+                <label>All plots are appropriate and polished (titles, labels, ticks, legend).</label>
+                <i class="fas fa-check-circle"></i>
+            </li>
+            <li class="todo-item">
+                <input type="checkbox" class="task-checkbox">
+                <label>Includes at least one histogram.</label>
+                <i class="fas fa-check-circle"></i>
+            </li>
+            <li class="todo-item">
+                <input type="checkbox" class="task-checkbox">
+                <label>Includes a bar chart or count plot.</label>
+                <i class="fas fa-check-circle"></i>
+            </li>
+            <li class="todo-item">
+                <input type="checkbox" class="task-checkbox">
+                <label>Includes a scatter plot.</label>
+                <i class="fas fa-check-circle"></i>
+            </li>
+            <li class="todo-item">
+                <input type="checkbox" class="task-checkbox">
+                <label>Includes a box plot.</label>
+                <i class="fas fa-check-circle"></i>
+            </li>
+            <li class="todo-item">
+                <input type="checkbox" class="task-checkbox">
+                <label>Includes a clustered bar chart or heatmap.</label>
+                <i class="fas fa-check-circle"></i>
+            </li>
+            <li class="todo-item">
+                <input type="checkbox" class="task-checkbox">
+                <label>Includes at least one Facet Plot.</label>
+                <i class="fas fa-check-circle"></i>
+            </li>
+            <li class="todo-item">
+                <input type="checkbox" class="task-checkbox">
+                <label>Includes a plot matrix or multi-encoding scatterplot.</label>
+                <i class="fas fa-check-circle"></i>
+            </li>
+            <li class="todo-item">
+                <input type="checkbox" class="task-checkbox">
+                <label>Summary HTML/PDF of both notebooks generated.</label>
+                <i class="fas fa-check-circle"></i>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        // Save state to localStorage
+        function saveState() {
+            const checkboxes = document.querySelectorAll('.task-checkbox');
+            const state = [];
+            checkboxes.forEach(checkbox => {
+                state.push(checkbox.checked);
+            });
+            localStorage.setItem('checklistState', JSON.stringify(state));
+        }
+
+        // Load state from localStorage
+        function loadState() {
+            const savedState = localStorage.getItem('checklistState');
+            if (savedState) {
+                const state = JSON.parse(savedState);
+                const checkboxes = document.querySelectorAll('.task-checkbox');
+                checkboxes.forEach((checkbox, index) => {
+                    checkbox.checked = state[index];
+                    updateLabelStyle(checkbox);
+                });
+            }
+        }
+
+        // Update label and icon style
+        function updateLabelStyle(checkbox) {
+            const label = checkbox.nextElementSibling;
+            const icon = label.nextElementSibling;
+            
+            if (checkbox.checked) {
+                label.classList.add('completed');
+                icon.classList.add('show');
+            } else {
+                label.classList.remove('completed');
+                icon.classList.remove('show');
+            }
+        }
+
+        // Event listeners
+        document.addEventListener('DOMContentLoaded', loadState);
+        
+        document.querySelectorAll('.task-checkbox').forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                updateLabelStyle(checkbox);
+                saveState();
+            });
+        });
+    </script>
+</body>
+</html>
