@@ -7,7 +7,7 @@ This project analyzes the Ford GoBike bike-sharing system data to uncover trends
 ## How to Run 🏃
 1. Clone this repository:
    ```sh
-   git clone https://github.com/yourusername/FordGoBike-Analysis.git
+   git clone https://github.com/AmmarYasserAI-2/FordGoBike-Analysis.git
    ```
 2. Install dependencies:
    ```sh
@@ -58,5 +58,5 @@ This project was conducted as part of the **DECI and Udacity Data & AI Track**.
 ![image](https://github.com/user-attachments/assets/b2fb6d93-aee2-4127-9843-a6e9d9bc7b4f)
 
 ---
-🔗 **Follow my work:** [GitHub](https://github.com/yourusername) | [LinkedIn](https://linkedin.com/in/yourprofile)
+🔗 **Follow my work:** [GitHub](https://github.com/AmmarYasserAI-2) | [LinkedIn](https://linkedin.com/in/ammar-batea/)
 
