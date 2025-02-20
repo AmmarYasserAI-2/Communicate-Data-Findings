@@ -54,7 +54,8 @@ This analysis reveals distinct biking patterns in the Ford GoBike system, differ
 
 ## Acknowledgments 🙌
 This project was conducted as part of the **DECI and Udacity Data & AI Track**. 
-![Passed](image.png)
+
+![image](https://github.com/user-attachments/assets/b2fb6d93-aee2-4127-9843-a6e9d9bc7b4f)
 
 ---
 🔗 **Follow my work:** [GitHub](https://github.com/yourusername) | [LinkedIn](https://linkedin.com/in/yourprofile)
