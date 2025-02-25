@@ -4,16 +4,40 @@
 ## Overview 🚴‍♂️
 This project analyzes the Ford GoBike bike-sharing system data to uncover trends in user behavior, trip duration, peak usage times, and more. The dataset includes details on ride duration, user type, gender, birth year, and trip timestamps.
 
-## How to Run 🏃
-1. Clone this repository:
-   ```sh
-   git clone https://github.com/AmmarYasserAI-2/FordGoBike-Analysis.git
-   ```
-2. Install dependencies:
-   ```sh
-   pip install numpy pandas matplotlib seaborn
-   ```
-3. Run the Jupyter Notebook or Python scripts.
+1. **duration_sec**: the duration of the trip in seconds
+
+2. **start_time**: the date and time when the trip started
+
+3. **end_time**: the date and time when the trip ended
+
+4. **start_station_id**: The unique identifier for the station where the trip began
+
+5. **start_station_name**: the name of the station where the trip began
+
+6. **start_station_latitude**: The latitude coordinate of the start station
+
+7. **start_station_longitude**: The longitude coordinate of the start station
+
+8. **end_station_id**: the unique identifier for the station where the trip ended
+
+9. **end_station_name**: The name of the station where the trip ended
+
+10. **end_station_latitude**: The latitude coordinate of the end station
+
+11. **end_station_longitude**: The longitude coordinate of the end station
+
+12. **bike_id**: The unique identifier for the bike used during the trip
+
+13. **user_type**: The type of user: "Subscriber" for members or "Customer" for casual users
+
+14. **member_birth_year**: The birth year of the user
+
+15. **member_gender**: The gender of the user
+
+16. **bike_share_for_all_trip**: Indicates whether the trip was part of the "Bike Share for All" program which offers discounted memberships to low income residents
+
+
+
 
 
 ## Key Insights 📊
@@ -56,6 +80,17 @@ This analysis reveals distinct biking patterns in the Ford GoBike system, differ
 This project was conducted as part of the **DECI and Udacity Data & AI Track**. 
 
 ![image](https://github.com/user-attachments/assets/b2fb6d93-aee2-4127-9843-a6e9d9bc7b4f)
+
+## How to Run 🏃
+1. Clone this repository:
+   ```sh
+   git clone https://github.com/AmmarYasserAI-2/FordGoBike-Analysis.git
+   ```
+2. Install dependencies:
+   ```sh
+   pip install numpy pandas matplotlib seaborn
+   ```
+3. Run the Jupyter Notebook or Python scripts.
 
 ---
 🔗 **Follow my work:** [GitHub](https://github.com/AmmarYasserAI-2) | [LinkedIn](https://linkedin.com/in/ammar-batea/)
